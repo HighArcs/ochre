@@ -1,0 +1,22 @@
+{
+  "name": "@rqft/ochre",
+  "version": "1.0.4",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "eslint": "^8.21.0",
+    "node": "^17.9.1",
+    "node-fetch": "^2.6.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
+  },
+  "scripts": {
+    "build": "tsc && npm version patch && npm publish --access public"
+  },
+  "author": "",
+  "license": "ISC"
+}
