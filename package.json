@@ -18,5 +18,11 @@
     "build": "tsc && npm version patch && npm publish --access public"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HighArcs/ochre",
+    "email": "me@clancy.lol"
+  },
+  "homepage": "https://github.com/HighArcs/ochre",
+  "readme": "https://raw.githubusercontent.com/HighArcs/ochre/master/README.md"
 }

@@ -203,7 +203,7 @@ class CommandManager {
         });
         return out;
     }
-    async tests() {
+    async test() {
         process
             .openStdin()
             .on("data", (data) => {
@@ -221,6 +221,13 @@ class CommandManager {
             process.exit(1);
         })
             .resume();
+    }
+    run(on = process.argv) {
+        const name = on[0];
+        if (name !== this.name) {
+            process.exit(1);
+        }
+        return this.execute(on[1], on.slice(2));
     }
 }
 exports.CommandManager = CommandManager;

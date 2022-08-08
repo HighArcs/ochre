@@ -298,7 +298,7 @@ export class CommandManager {
     return out;
   }
 
-  public async tests(): Promise<void> {
+  public async test(): Promise<void> {
     process
       .openStdin()
       .on("data", (data) => {
@@ -317,5 +317,14 @@ export class CommandManager {
         process.exit(1);
       })
       .resume();
+  }
+
+  public run(on: Array<string> = process.argv): Promise<void> {
+    const name = on[0];
+    if (name !== this.name) {
+      process.exit(1);
+    }
+
+    return this.execute(on[1]!, on.slice(2));
   }
 }
