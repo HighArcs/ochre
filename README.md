@@ -16,6 +16,6 @@ manager.add({
 
 manager.run();
 
-// or, if you want to test
+// or, if you want to test using stdin
 manager.test();
 ```
